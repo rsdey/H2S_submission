@@ -3,8 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Send, Bot, User, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Message } from "@/types/chat";
-import { Button } from "@/components/ui/Button";
+import { Message } from "../../types/chat";
+import { Button } from "../ui/Button";
 
 export default function ChatContainer({ userId }: { userId: string }) {
   const [messages, setMessages] = useState<Message[]>([]);

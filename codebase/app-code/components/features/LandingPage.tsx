@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
+import { Button } from "../ui/Button";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { GraduationCap, Sparkles, Target, Zap, ArrowRight, Github } from "lucide-react";

@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { auth } from "@/lib/firebase";
+import { auth } from "../../lib/firebase";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { GraduationCap, Mail, Lock, Chrome, ArrowRight, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/Button";
+import { Button } from "../../components/ui/Button";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");

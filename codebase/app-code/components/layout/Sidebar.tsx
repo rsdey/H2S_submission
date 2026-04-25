@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { db, auth } from "@/lib/firebase";
+import { db, auth } from "../../lib/firebase";
 import { doc, onSnapshot } from "firebase/firestore";
 import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { CheckCircle2, GraduationCap, LayoutDashboard, Settings, LogOut } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "../ui/Button";
 
 export default function Sidebar({ userId }: { userId: string }) {
   const [mastered, setMastered] = useState<string[]>([]);
