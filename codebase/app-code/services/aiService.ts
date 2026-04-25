@@ -1,7 +1,7 @@
-import { genAI, DEFAULT_MODEL } from "../lib/gemini";
-import { SYSTEM_PROMPT } from "../constants/prompts";
-import { Message } from "../types/chat";
-import { db } from "../lib/firebase";
+import { genAI, DEFAULT_MODEL } from "@/lib/gemini";
+import { SYSTEM_PROMPT } from "@/constants/prompts";
+import { Message } from "@/types/chat";
+import { db } from "@/lib/firebase";
 import { doc, getDoc, setDoc, updateDoc, arrayUnion, serverTimestamp } from "firebase/firestore";
 
 export async function getStratResponseStream(messages: Message[], userId: string) {

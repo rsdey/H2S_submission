@@ -1,4 +1,4 @@
-import { getStratResponseStream, handleMasteryDetection } from "../../../services/aiService";
+import { getStratResponseStream, handleMasteryDetection } from "@/services/aiService";
 
 export async function POST(req: Request) {
   try {

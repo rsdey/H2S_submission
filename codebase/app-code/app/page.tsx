@@ -1,9 +1,9 @@
 "use client";
 
-import { useAuth } from "../hooks/useAuth";
-import Sidebar from "../components/layout/Sidebar";
-import ChatContainer from "../components/chat/ChatContainer";
-import LandingPage from "../components/features/LandingPage";
+import { useAuth } from "@/hooks/useAuth";
+import Sidebar from "@/components/layout/Sidebar";
+import ChatContainer from "@/components/chat/ChatContainer";
+import LandingPage from "@/components/features/LandingPage";
 import { Loader2 } from "lucide-react";
 
 export default function Home() {
