@@ -8,6 +8,7 @@ export async function getStratResponseStream(messages: Message[], userId: string
   const model = genAI.getGenerativeModel({
     model: DEFAULT_MODEL,
     systemInstruction: SYSTEM_PROMPT,
+    tools: [{ googleSearch: {} }],
   });
 
   const lastMessage = messages[messages.length - 1].content;

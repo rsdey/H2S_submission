@@ -38,7 +38,7 @@ export default function LandingPage() {
           <span className="text-2xl font-display font-bold tracking-tight">Strat</span>
         </div>
         <div className="flex items-center gap-4">
-          <Button variant="ghost" onClick={() => router.push("/login")} className="font-bold">
+          <Button variant="ghost" onClick={() => router.push("/login")} className="font-bold text-white hover:text-white/80">
             Log In
           </Button>
           <Button onClick={() => router.push("/login")} className="font-bold px-6">
@@ -71,7 +71,7 @@ export default function LandingPage() {
                 Start Learning Now
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" className="h-16 px-10 text-lg font-bold border-2">
+              <Button variant="outline" onClick={() => router.push("/login")} className="h-16 px-10 text-lg font-bold border-2 text-white border-white/30 hover:bg-white/10">
                 Learn the Method
               </Button>
             </div>
