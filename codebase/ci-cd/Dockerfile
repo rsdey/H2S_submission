@@ -24,9 +24,8 @@ COPY . .
 
 # Disable telemetry and Turbopack during build for stable alias resolution
 ENV NEXT_TELEMETRY_DISABLED 1
-ENV NEXT_TURBO_BUILD false
 
-RUN pnpm run build
+RUN pnpm next build --webpack
 
 # Stage 3: Production runner
 FROM node:20-alpine AS runner
