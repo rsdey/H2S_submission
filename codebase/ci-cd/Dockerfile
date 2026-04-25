@@ -22,8 +22,9 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Disable telemetry during build
+# Disable telemetry and Turbopack during build for stable alias resolution
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV NEXT_TURBO_BUILD false
 
 RUN pnpm run build
 
