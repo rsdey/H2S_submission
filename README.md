@@ -1,4 +1,4 @@
-# H2S_submission# Strat — Adaptive Learning Assistant
+# Strat — Adaptive Learning Assistant
 
 > **An intelligent, AI-powered learning companion that guides learners through complex topics using the Socratic method — asking strategic questions instead of handing out answers.**
 
@@ -167,10 +167,8 @@ pnpm run dev
 Open [http://localhost:3000](http://localhost:3000) to start your learning journey.
 
 ### Deployment
-```bash
-# From app-code directory:
-gcloud run deploy strat-app --source . --dockerfile ../ci-cd/Dockerfile
-```
+# From the codebase/ directory:
+gcloud run deploy strat-app --source . --dockerfile ci-cd/Dockerfile
 
 ---
 

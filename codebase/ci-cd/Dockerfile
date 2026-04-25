@@ -6,8 +6,8 @@ WORKDIR /app
 # Install pnpm
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
-# Copy package files
-COPY package.json pnpm-lock.yaml* ./
+# Copy package files from app-code directory
+COPY app-code/package.json app-code/pnpm-lock.yaml* ./
 
 # Install dependencies
 RUN pnpm install --frozen-lockfile
@@ -20,7 +20,8 @@ WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
 COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+# Copy app source from app-code directory
+COPY app-code/ .
 
 # Disable telemetry during build
 ENV NEXT_TELEMETRY_DISABLED 1
