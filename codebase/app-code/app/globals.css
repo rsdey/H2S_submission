@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  /* Stitch Design Tokens - Strat */
+  --color-primary: #0A192F;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #0d1c32;
+  --color-on-primary-container: #76849f;
+
+  --color-secondary: #00CFD5;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #58f8fe;
+  --color-on-secondary-container: #007073;
+
+  --color-tertiary: #2E5BFF;
+  --color-on-tertiary: #ffffff;
+
+  --color-background: #f7f9fb;
+  --color-on-background: #191c1e;
+
+  --color-surface: #f7f9fb;
+  --color-on-surface: #191c1e;
+  --color-surface-variant: #e0e3e5;
+  --color-on-surface-variant: #44474d;
+
+  --color-outline: #75777e;
+  --color-outline-variant: #c5c6cd;
+
+  --color-surface-container-low: #f0f3f5;
+  --color-surface-container: #eaeff2;
+  --color-surface-container-high: #e4e9ec;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight font-bold;
+  }
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(10, 25, 47, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Strat Chat Bubbles */
+.chat-user {
+  @apply relative pl-4 border-l-4 border-tertiary my-4 py-2 bg-surface-container-low rounded-r-lg max-w-[85%] self-end;
+}
+
+.chat-ai {
+  @apply relative p-4 bg-secondary-container/10 border border-secondary/20 rounded-lg my-4 max-w-[85%] self-start;
+}
