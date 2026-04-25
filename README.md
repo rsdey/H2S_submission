@@ -167,8 +167,18 @@ pnpm run dev
 Open [http://localhost:3000](http://localhost:3000) to start your learning journey.
 
 ### Deployment
-# From the codebase/ directory:
-gcloud run deploy strat-app --source . --dockerfile ci-cd/Dockerfile
+
+To deploy to Google Cloud Run, run the following from the **`app-code/`** directory:
+
+```bash
+cd app-code
+gcloud run deploy strat-app --source . --dockerfile ../ci-cd/Dockerfile
+```
+
+Alternatively, from the **`codebase/`** root:
+```bash
+docker build -f ci-cd/Dockerfile ./app-code -t strat-app
+```
 
 ---
 
